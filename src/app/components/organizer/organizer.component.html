@@ -9,14 +9,18 @@
             *ngFor="let task of tasks let idx = index"
             class="task"> 
                 <span>
-                    <strong>{{idx + 1}}</strong>
+                    <strong>{{idx + 1}}.</strong>
                     {{task.title}}
                 </span>
                 <button 
                 (click)="remove(task)"
                  type="button" 
                  class="btn btn-primary remove-btn">
-                    <mat-icon>cancel</mat-icon>Remove task</button>
+                    <mat-icon>cancel</mat-icon>
+                    <span class="button-text">
+                        Remove task
+                    </span>
+                </button>
             </li>
         </ul>
     </main>
@@ -26,8 +30,12 @@
             <button 
             type="submit"
             class="btn btn-primary btn-block submit-btn"
-            [disabled]="form.invalid"
-            ><mat-icon>check_box</mat-icon>Add note</button>
+            [disabled]="form.invalid">
+            <mat-icon>check_box</mat-icon>
+            <span class="button-text">
+                Add note
+            </span>
+            </button>
         </form>
     </footer>
 </section>
