@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { Day } from 'src/app/common/interfaces/days.interface';
 import { Week } from 'src/app/common/interfaces/week.interface';
 import { DateService } from 'src/app/shared/services/date.service';
 
@@ -44,5 +45,9 @@ generate(now: moment.Moment) {
       })
   }
   this.calendar = calendar;
+}
+
+select(day: moment.Moment) {
+  this.dateService.changeDate(day)
 }
 }

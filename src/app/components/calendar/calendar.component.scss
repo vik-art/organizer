@@ -23,8 +23,7 @@ table {
             opacity: .6;
         }
         &:hover:not(.disabled) {
-            background-color: $link-hover;
-            color: $light;
+            background-color: $grey;
             cursor: pointer;
         }
     }
