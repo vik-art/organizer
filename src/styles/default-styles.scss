@@ -47,7 +47,7 @@ table th {
         background-color: $bg;
         color: $text;
         border: 1px sold $text;
-        cursor: pointer;
+        cursor: not-allowed;
     }
     &:hover:not(:disabled) {
         opacity: 0.5;

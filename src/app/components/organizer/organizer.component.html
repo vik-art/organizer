@@ -4,20 +4,25 @@
         <hr/>
     </header>
     <main>
-        <ul>
-            <li class="task"> 
+        <ul *ngIf="tasks.length; else noTasks">
+            <li 
+            *ngFor="let task of tasks let idx = index"
+            class="task"> 
                 <span>
-                    <strong>1</strong>
-                    Task name
+                    <strong>{{idx + 1}}</strong>
+                    {{task.title}}
                 </span>
-                <button type="button" class="btn btn-primary remove-btn">
+                <button 
+                (click)="remove(idx)"
+                 type="button" 
+                 class="btn btn-primary remove-btn">
                     <mat-icon>cancel</mat-icon>Remove task</button>
             </li>
         </ul>
     </main>
     <footer>
         <form [formGroup]="form" (ngSubmit)="submit()">
-            <input formControlName="task" type="text">
+            <input formControlName="title" type="text">
             <button 
             type="submit"
             class="btn btn-primary btn-block submit-btn"
@@ -26,3 +31,7 @@
         </form>
     </footer>
 </section>
+
+<ng-template #noTasks>
+    <p>You haven't got tasks for this date yet</p>
+</ng-template>
