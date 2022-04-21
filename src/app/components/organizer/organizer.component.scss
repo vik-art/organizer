@@ -9,7 +9,8 @@ section {
     }
 }
 
-.remove-btn {
+.remove-btn,
+.submit-btn {
     @include center-element;
 }
 

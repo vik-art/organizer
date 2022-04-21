@@ -45,6 +45,8 @@ table th {
     transition: $animation;
     &:disabled {
         background-color: $bg;
+        color: $text;
+        border: 1px sold $text;
         cursor: pointer;
     }
     &:hover:not(:disabled) {

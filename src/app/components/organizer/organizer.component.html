@@ -16,12 +16,13 @@
         </ul>
     </main>
     <footer>
-        <form>
-            <input type="text">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <input formControlName="task" type="text">
             <button 
             type="submit"
-            class="btn btn-primary btn-block"
-            >Add note</button>
+            class="btn btn-primary btn-block submit-btn"
+            [disabled]="form.invalid"
+            ><mat-icon>check_box</mat-icon>Add note</button>
         </form>
     </footer>
 </section>
