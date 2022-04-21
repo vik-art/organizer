@@ -47,13 +47,18 @@ export class OrganizerComponent implements OnInit, OnDestroy {
         date: this.dateService.date.value.format('DD-MM-YYYY')
       }
       this.taskService.create(task).subscribe((task) => {
-        console.log(task)
+        this.tasks.push(task);
         this.form.reset();
       }, err => {
         console.log(err)
       })
     }
-    remove(idx: number) {
-     
+    remove(task: Task) {
+     this.taskService.remove(task).subscribe(() => {
+       this.tasks = this.tasks.filter(t => t.id !== task.id)
+     },
+     err => {
+       console.error(err)
+     })
     }
 }

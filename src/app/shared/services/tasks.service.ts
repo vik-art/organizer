@@ -40,4 +40,8 @@ export class TaskService {
                 })
             )
     }
+
+    remove(task:Task): Observable<void> {
+        return this.http.delete<void>(`${environment.dbUrl}/${task.date}/${task.id}.json`)
+    }
 }
