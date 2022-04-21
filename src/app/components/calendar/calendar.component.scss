@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+
+    td, th {
+        border: 1px solid $text;
+        padding: .5rem 1rem;
+    }
+    th {
+        background-color: $link-hover;
+        color: $light;
+        font-weight: 700;
+    }
+
+    td {
+        background-color: $light;
+        transition: $animation;
+        text-align: center;
+        &.disabled {
+            opacity: .6;
+        }
+        &:hover:not(.disabled) {
+            background-color: $grey;
+            cursor: pointer;
+        }
+    }
+
+    .active {
+        color: $red;
+        font-weight: bolder;
+    }
+    .selected {
+        color: $blue;
+        font-weight: 700;
+    }
+}

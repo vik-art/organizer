@@ -13,6 +13,6 @@ export class SelectorComponent {
   ) { }
 
   go(dir: number) {
-      this.dateService.changeDate(dir)
+      this.dateService.changeMonth(dir)
   }
 }
