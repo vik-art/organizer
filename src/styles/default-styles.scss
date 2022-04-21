@@ -14,11 +14,11 @@ ul {
 
 input {
     display: block;
-    width: 100;
-    padding: 4rem;
+    width: 100%;
+    padding: .4rem;
    font-size: 1.2rem;
    outline: none;
-   border: 1px solid $accent-link-color;
+   border: 1px solid $grey;
    margin-bottom: .5rem;
 }
 
@@ -59,8 +59,8 @@ table th {
 }
 
 .btn-primary {
-    background-color: $bg;
-    color: $text;
+    background-color: $red;
+    color: $light;
 }
 
 .text-center {

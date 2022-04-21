@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+section {
+    border: 1px solid $grey;
+    padding: 1rem;
+    header {
+        margin-bottom: 1rem;
+    }
+}
+
+.remove-btn {
+    @include center-element;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+    border: 1px solid $grey;
+}
