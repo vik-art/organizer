@@ -10,7 +10,7 @@ import { DateService } from 'src/app/shared/services/date.service';
 })
 export class CalendarComponent implements OnInit {
 
-  week!: Week[];
+  calendar!: Week[];
 
   constructor(
     private dateService: DateService
@@ -43,6 +43,6 @@ generate(now: moment.Moment) {
         })
       })
   }
-  console.log(calendar)
+  this.calendar = calendar;
 }
 }
